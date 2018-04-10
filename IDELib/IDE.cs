@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IDELib
 {
-    public class Class1
+    public class IDE
     {
         public void Hello()
         {
