@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IDELanguages
 {
-    public class Class1
+    public class Languages
     {
     }
 }
