@@ -13,5 +13,6 @@ namespace IDELib
         double Width { get; set; }
         double Top { get; set; }
         double Left { get; set; }
+        string Build();
     }
 }
