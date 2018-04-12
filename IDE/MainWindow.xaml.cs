@@ -24,5 +24,11 @@ namespace IDE
         {
             InitializeComponent();
         }
+
+        private void ContinueBtnClicked(object sender, RoutedEventArgs e)
+        {
+            SelectLanguageSP.Visibility = Visibility.Hidden;
+            GUIBuilderSP.Visibility = Visibility.Visible;
+        }
     }
 }

@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IDE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="FactoryPattern- GUIBuilder9000" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel x:Name="SelectLanguageSP">
+            <TextBox Height="50px" Width="300px" TextWrapping="Wrap" VerticalAlignment="Center">Welcome To GUIBuilder9000, Please Select The Language You Would Like Us To Build Your GUI In</TextBox>
+            <ComboBox SelectedValue="0" x:Name="SelectLanguageCB" Width="200px" Text="Please Select Your Language" >
+               
+            </ComboBox>
+            <Button x:Name="ContinueBtn" Width="100px" Click="ContinueBtnClicked">Continue</Button>
+        </StackPanel>
+        <StackPanel x:Name="GUIBuilderSP" Visibility="Hidden">
+            
+        </StackPanel>
     </Grid>
 </Window>
