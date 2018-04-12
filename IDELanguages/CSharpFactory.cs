@@ -16,7 +16,7 @@ namespace IDELanguages
 
         public override void Execute(List<IComponent> Components)
         {
-            String fullCode = $"<!DOCTYPE html><html><head><title>My generated HTML</title></head><body></body>{ComponentFactory.BuildAll(Components)}</html>";
+            String fullCode = $"<Window x:Class='IDE.MainWindow' xmlns = 'http://schemas.microsoft.com/winfx/2006/xaml/presentation' xmlns: x = 'http://schemas.microsoft.com/winfx/2006/xaml'xmlns: d = 'http://schemas.microsoft.com/expression/blend/2008' xmlns: mc = 'http://schemas.openxmlformats.org/markup-compatibility/2006' xmlns: local = 'clr-namespace:IDE'mc: Ignorable = 'd' Title = 'FactoryPattern- GUIBuilder9000' Height = '350' Width = '700' ><Grid>{ComponentFactory.BuildAll(Components)}</Grid></Window>";
         }
     }
 }

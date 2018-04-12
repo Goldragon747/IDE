@@ -16,7 +16,7 @@ namespace IDELanguages
 
         public string Build()
         {
-            throw new NotImplementedException();
+            return $"<Label Height='{Height}' Width='{Width}' Margin='{Left} {Top} 0 0' >{Content}</Label>";
         }
     }
 }
