@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IDE"
         mc:Ignorable="d"
-        Title="FactoryPattern- GUIBuilder9000" Height="350" Width="525">
+        Title="FactoryPattern- GUIBuilder9000" Height="350" Width="700">
     <Grid>
         <StackPanel x:Name="SelectLanguageSP">
             <TextBox Height="50px" Width="300px" TextWrapping="Wrap" VerticalAlignment="Center">Welcome To GUIBuilder9000, Please Select The Language You Would Like Us To Build Your GUI In</TextBox>
@@ -14,8 +14,30 @@
             </ComboBox>
             <Button x:Name="ContinueBtn" Width="100px" Click="ContinueBtnClicked">Continue</Button>
         </StackPanel>
-        <StackPanel x:Name="GUIBuilderSP" Visibility="Hidden">
-            
+        <StackPanel x:Name="GUIBuilderSP" Orientation="Horizontal" Visibility="Hidden">
+            <StackPanel Width="100px">
+                <Label BorderBrush="Black" BorderThickness="1">Components</Label>
+                <ListBox Width="100px" x:Name="ComponentsLB">
+                    <ListBoxItem></ListBoxItem>
+                </ListBox>
+            </StackPanel>
+            <StackPanel Width="100px" Background="AliceBlue">
+                <Label BorderBrush="Black" BorderThickness="1">Control</Label>
+                <Label Width="100px">Top Alignment</Label>
+                <TextBox x:Name="TopAlignTB">0</TextBox>
+                <Label>Left Alignment</Label>
+                <TextBox x:Name="LeftAlignTB">0</TextBox>
+                <Label>Height</Label>
+                <TextBox x:Name="HeightTB">0</TextBox>
+                <Label>Width</Label>
+                <TextBox x:Name="WidthTB">0</TextBox>
+                <Label>Content</Label>
+                <TextBox x:Name="ContentTB">Hello</TextBox>
+                <Button FontSize="10px" Click="CreatComponentBtnClicked">Create Component</Button>
+            </StackPanel>
+            <StackPanel Width="500px">
+                <Label BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center">Preview</Label>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

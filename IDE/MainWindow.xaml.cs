@@ -30,5 +30,13 @@ namespace IDE
             SelectLanguageSP.Visibility = Visibility.Hidden;
             GUIBuilderSP.Visibility = Visibility.Visible;
         }
+
+        private void CreatComponentBtnClicked(object sender, RoutedEventArgs e)
+        {
+            string width = WidthTB.Text;
+            string height = HeightTB.Text;
+            string leftAlign = LeftAlignTB.Text;
+            string topAlign = TopAlignTB.Text;
+        }
     }
 }
