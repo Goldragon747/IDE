@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace IDELib
 {
-    public interface IComponent
+    abstract public class IComponent
     {
-        String Content { get; set; }
-        double Height { get; set; }
-        double Width { get; set; }
-        double Top { get; set; }
-        double Left { get; set; }
-        string Build();
+        public String Content { get; set; }
+        public double Height { get; set; }
+        public double Width { get; set; }
+        public double Top { get; set; }
+        public double Left { get; set; }
+        abstract public string Build();
     }
 }
