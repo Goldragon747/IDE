@@ -22,7 +22,9 @@ namespace IDE
     {
         public MainWindow()
         {
-            InitializeComponent();
+            
+            InitializeComponent();    
+            //SelectLanguageCB.Items.Add("");
         }
 
         private void ContinueBtnClicked(object sender, RoutedEventArgs e)
