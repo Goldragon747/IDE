@@ -7,11 +7,23 @@ using IDELib;
 
 namespace IDELanguages
 {
-    public class Language : IDELib.IDE
+    public class Language : IDELib.IGenericLanguage
     {
-        public override List<ComponentFactory> InstaniateLanguages()
+        public Language()
         {
-            return new List<ComponentFactory> { new CSharpFactory(), new HTMLFactory()};
+            InstaniateLanguages();
+        }
+        public List<String> LanguagesSupported { get; set; }
+
+        public List<ComponentFactory> InstaniateLanguages()
+        {
+            List<ComponentFactory> languages = new List<ComponentFactory> { new CSharpFactory(), new HTMLFactory() };
+            LanguagesSupported = new List<String>();
+            foreach (ComponentFactory language in languages)
+            {
+                LanguagesSupported.Add(language.LanguageName);
+            }
+            return languages;
         }
     }
 }

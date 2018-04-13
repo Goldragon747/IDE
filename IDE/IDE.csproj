@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDELib\IDELib.csproj">
+      <Project>{ef0b5c2c-67b1-4152-abb0-27c1efd60d07}</Project>
+      <Name>IDELib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

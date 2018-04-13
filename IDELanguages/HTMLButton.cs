@@ -10,7 +10,7 @@ namespace IDELanguages
     {
         public override string Build()
         {
-            return $"<button style='display:absolute;top:{Top};left:{Left};width:{Width}px;height:{Height};'>{Content}</button>";
+            return $"<button style='position:absolute;top:{Top}px;left:{Left}px;width:{Width}px;height:{Height}px;'>{Content}</button>";
         }
     }
 }
