@@ -11,9 +11,10 @@ namespace IDELanguages
     {
         public Language()
         {
-            InstaniateLanguages();
+            LanguageFactories = InstaniateLanguages();
         }
         public List<string> LanguagesSupported { get; set; }
+        public List<ComponentFactory> LanguageFactories { get; set; }
 
         public List<ComponentFactory> InstaniateLanguages()
         {

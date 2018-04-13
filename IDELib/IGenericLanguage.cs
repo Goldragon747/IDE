@@ -18,6 +18,8 @@ namespace IDELib
         /// </summary>
         /// <returns>The list of instaniated languages.</returns>
         List<ComponentFactory> InstaniateLanguages();
-       
+
+        List<ComponentFactory> LanguageFactories { get; set; }
+
     }
 }
