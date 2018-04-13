@@ -33,7 +33,7 @@
                 <TextBox x:Name="WidthTB">0</TextBox>
                 <Label>Content</Label>
                 <TextBox x:Name="ContentTB">Hello</TextBox>
-                <Button FontSize="10px" Click="CreatComponentBtnClicked">Create Component</Button>
+                <Button  FontSize="10px" Click="CreatComponentBtnClicked">Create Component</Button>
             </StackPanel>
             <StackPanel Width="500px">
                 <Label BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center">Preview</Label>

@@ -94,6 +94,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IDELanguages\IDELanguages.csproj">
+      <Project>{ED704864-E610-4018-8461-253A760D1D77}</Project>
+      <Name>IDELanguages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IDELib\IDELib.csproj">
       <Project>{ef0b5c2c-67b1-4152-abb0-27c1efd60d07}</Project>
       <Name>IDELib</Name>
