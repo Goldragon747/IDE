@@ -10,7 +10,7 @@ namespace IDELanguages
     {
         public override string Build()
         {
-            
+            return $"<Button Height='{Height}' Width='{Width}' Margin='{Left} {Top} 0 0' >{Content}</Button>";
         }
     }
 }
