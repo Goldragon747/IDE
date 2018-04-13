@@ -22,10 +22,12 @@ namespace IDE
     /// </summary>
     public partial class MainWindow : Window
     {
+        IGenericLanguage IGL = new Language();
         public MainWindow()
         {
-            IGenericLanguage IGL = new Language();
+           
             InitializeComponent();
+
             foreach (string languageName in IGL.LanguagesSupported )
             {
                 SelectLanguageCB.Items.Add(languageName);
@@ -36,6 +38,8 @@ namespace IDE
         {
             SelectLanguageSP.Visibility = Visibility.Hidden;
             GUIBuilderSP.Visibility = Visibility.Visible;
+            if()
+
         }
 
         private void CreatComponentBtnClicked(object sender, RoutedEventArgs e)
