@@ -14,9 +14,10 @@ namespace IDELanguages
             base.LanguageName = "HTML";
         }
 
-        public override void Execute(List<IComponent> Components)
+        public override void Execute()
         {
             String fullCode = $"<!DOCTYPE html><html><head><title>My generated HTML</title></head><body></body>{ComponentFactory.BuildAll(Components)}</html>";
+            ComponentFactory.Write(fullCode, "Compiled.html");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace IDELanguages
     {
         public override string Build()
         {
-            return $"<input type='textbox' style='display:absolute;top:{Top};left:{Left};width:{Width}px;height:{Height};'>{Content}</input>";
+            return $"<input type='textbox' style='position:absolute;top:{Top}px;left:{Left}px;width:{Width}px;height:{Height}px;'>{Content}</input>";
         }
     }
 }

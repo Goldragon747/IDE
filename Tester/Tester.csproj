@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED704864-E610-4018-8461-253A760D1D77}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IDELanguages</RootNamespace>
-    <AssemblyName>IDELanguages</AssemblyName>
+    <ProjectGuid>{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tester</RootNamespace>
+    <AssemblyName>Tester</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,18 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSharpButton.cs" />
-    <Compile Include="CSharpFactory.cs" />
-    <Compile Include="CSharpLabel.cs" />
-    <Compile Include="HTMLButton.cs" />
-    <Compile Include="HTMLDiv.cs" />
-    <Compile Include="HTMLFactory.cs" />
-    <Compile Include="HTMLParagraph.cs" />
-    <Compile Include="HTMLTextInput.cs" />
-    <Compile Include="Language.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDELanguages\IDELanguages.csproj">
+      <Project>{ed704864-e610-4018-8461-253a760d1d77}</Project>
+      <Name>IDELanguages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IDELib\IDELib.csproj">
       <Project>{ef0b5c2c-67b1-4152-abb0-27c1efd60d07}</Project>
       <Name>IDELib</Name>

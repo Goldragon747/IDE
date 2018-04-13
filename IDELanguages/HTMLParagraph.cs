@@ -11,7 +11,7 @@ namespace IDELanguages
 
         public override string Build()
         {
-            return $"<p style='display:absolute;top:{Top};left:{Left};width:{Width}px;height:{Height};'>{Content}</p>";
+            return $"<p style='position:absolute;top:{Top}px;left:{Left}px;width:{Width}px;height:{Height}px;'>{Content}</p>";
         }
     }
 }
