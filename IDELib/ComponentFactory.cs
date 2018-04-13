@@ -13,11 +13,12 @@ namespace IDELib
             LanguageName = "Default Language Name";
             Components = new List<IComponent>();
         }
-        public String LanguageName { get; set; }
+        public string LanguageName { get; set; }
         public List<IComponent> Components { get; set; }
         public List<IComponent> AvailableComponents { get; set; }
-        public static String BuildAll(List<IComponent> list) {
-            String BuiltComponents = "";
+        abstract public void InstantiateAvailableComponents();
+        public static string BuildAll(List<IComponent> list) {
+            string BuiltComponents = "";
             foreach (IComponent component in list)
             {
                 BuiltComponents += component.Build();
@@ -27,7 +28,7 @@ namespace IDELib
 
         abstract public void Execute();
 
-        public static void Write(String content, String filename)
+        public static void Write(string content, string filename)
         {
             string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\" + filename))

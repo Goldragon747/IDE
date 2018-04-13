@@ -13,12 +13,12 @@ namespace IDELanguages
         {
             InstaniateLanguages();
         }
-        public List<String> LanguagesSupported { get; set; }
+        public List<string> LanguagesSupported { get; set; }
 
         public List<ComponentFactory> InstaniateLanguages()
         {
             List<ComponentFactory> languages = new List<ComponentFactory> { new CSharpFactory(), new HTMLFactory() };
-            LanguagesSupported = new List<String>();
+            LanguagesSupported = new List<string>();
             foreach (ComponentFactory language in languages)
             {
                 LanguagesSupported.Add(language.LanguageName);

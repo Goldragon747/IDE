@@ -16,8 +16,13 @@ namespace IDELanguages
 
         public override void Execute()
         {
-            String fullCode = $"<!DOCTYPE html><html><head><title>My generated HTML</title></head><body></body>{ComponentFactory.BuildAll(Components)}</html>";
+            string fullCode = $"<!DOCTYPE html><html><head><title>My generated HTML</title></head><body></body>{ComponentFactory.BuildAll(Components)}</html>";
             ComponentFactory.Write(fullCode, "Compiled.html");
+        }
+
+        public override void InstantiateAvailableComponents()
+        {
+            base.AvailableComponents = new List<IComponent> { new HTMLButton(), new HTMLDiv(), new HTMLParagraph(), new HTMLTextInput() };
         }
     }
 }
