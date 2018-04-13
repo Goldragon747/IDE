@@ -1,4 +1,6 @@
-﻿using System;
+﻿using IDELanguages;
+using IDELib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,9 +24,12 @@ namespace IDE
     {
         public MainWindow()
         {
-            
-            InitializeComponent();    
-            //SelectLanguageCB.Items.Add("");
+            IGenericLanguage IGL = new Language();
+            InitializeComponent();
+            foreach (string languageName in IGL.LanguagesSupported )
+            {
+                SelectLanguageCB.Items.Add(languageName);
+            }
         }
 
         private void ContinueBtnClicked(object sender, RoutedEventArgs e)
