@@ -16,7 +16,12 @@ namespace IDELanguages
 
         public override void Execute()
         {
-            String fullCode = $"<Window x:Class='IDE.MainWindow' xmlns = 'http://schemas.microsoft.com/winfx/2006/xaml/presentation' xmlns: x = 'http://schemas.microsoft.com/winfx/2006/xaml'xmlns: d = 'http://schemas.microsoft.com/expression/blend/2008' xmlns: mc = 'http://schemas.openxmlformats.org/markup-compatibility/2006' xmlns: local = 'clr-namespace:IDE'mc: Ignorable = 'd' Title = 'FactoryPattern- GUIBuilder9000' Height = '350' Width = '700' ><Grid>{ComponentFactory.BuildAll(Components)}</Grid></Window>";
+            string fullCode = $"<Window x:Class='IDE.MainWindow' xmlns = 'http://schemas.microsoft.com/winfx/2006/xaml/presentation' xmlns: x = 'http://schemas.microsoft.com/winfx/2006/xaml'xmlns: d = 'http://schemas.microsoft.com/expression/blend/2008' xmlns: mc = 'http://schemas.openxmlformats.org/markup-compatibility/2006' xmlns: local = 'clr-namespace:IDE'mc: Ignorable = 'd' Title = 'FactoryPattern- GUIBuilder9000' Height = '350' Width = '700' ><Grid>{ComponentFactory.BuildAll(Components)}</Grid></Window>";
+        }
+
+        public override void InstantiateAvailableComponents()
+        {
+            base.AvailableComponents = new List<IComponent> { new CSharpButton(), new CSharpLabel() };
         }
     }
 }

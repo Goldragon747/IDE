@@ -11,7 +11,7 @@ namespace IDELib
         /// <summary>
         /// Contains all supported libraries for the user to output.
         /// </summary>
-        List<String> LanguagesSupported { get; set; }
+        List<string> LanguagesSupported { get; set; }
 
         /// <summary>
         /// Instansiates all supported languages.

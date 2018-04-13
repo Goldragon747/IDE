@@ -8,7 +8,7 @@ namespace IDELib
 {
     abstract public class IComponent
     {
-        public String Content { get; set; }
+        public string Content { get; set; }
         public double Height { get; set; }
         public double Width { get; set; }
         public double Top { get; set; }
