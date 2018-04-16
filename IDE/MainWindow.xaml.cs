@@ -23,6 +23,7 @@ namespace IDE
     public partial class MainWindow : Window
     {
         IGenericLanguage IGL = new Language();
+        ComponentFactory CF;
         public MainWindow()
         {
            
@@ -38,7 +39,13 @@ namespace IDE
         {
             SelectLanguageSP.Visibility = Visibility.Hidden;
             GUIBuilderSP.Visibility = Visibility.Visible;
-            if()
+            for (int i = 0; i < SelectLanguageCB.Items.Count; i++)
+            {
+                if (SelectLanguageCB.Items[i] == SelectLanguageCB.SelectedValue)
+                {
+                   CF = IGL.LanguageFactories[i]; 
+                }
+            }
 
         }
 
