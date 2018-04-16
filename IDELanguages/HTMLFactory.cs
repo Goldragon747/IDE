@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,10 @@ namespace IDELanguages
         {
             string fullCode = $"<!DOCTYPE html><html><head><title>My generated HTML</title></head><body></body>{ComponentFactory.BuildAll(Components)}</html>";
             ComponentFactory.Write(fullCode, "Compiled.html");
+            string currentDir = Environment.CurrentDirectory;
+            DirectoryInfo directory = new DirectoryInfo(
+            Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + "Compiled.html")));
+            System.Diagnostics.Process.Start(directory.ToString());
         }
 
         public override void InstantiateAvailableComponents()

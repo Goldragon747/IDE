@@ -30,8 +30,10 @@ namespace IDELib
 
         public static void Write(string content, string filename)
         {
-            string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter outputFile = new StreamWriter(mydocpath + @"\" + filename))
+            string currentDir = Environment.CurrentDirectory;
+            DirectoryInfo directory = new DirectoryInfo(
+                Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + filename)));
+            using (StreamWriter outputFile = new StreamWriter(directory.ToString()))
             {
                 outputFile.WriteLine(content);
             }

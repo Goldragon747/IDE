@@ -44,8 +44,10 @@
     <Compile Include="CSharpFactory.cs" />
     <Compile Include="CSharpLabel.cs" />
     <Compile Include="HTMLButton.cs" />
+    <Compile Include="HTMLDiv.cs" />
     <Compile Include="HTMLFactory.cs" />
     <Compile Include="HTMLParagraph.cs" />
+    <Compile Include="HTMLTextInput.cs" />
     <Compile Include="Language.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
