@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDE", "IDE\IDE.csproj", "{645F22E5-A031-4D2A-AD99-BF7C1B5CD651}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDELib", "IDELib\IDELib.csproj", "{EF0B5C2C-67B1-4152-ABB0-27C1EFD60D07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDELanguages", "IDELanguages\IDELanguages.csproj", "{ED704864-E610-4018-8461-253A760D1D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{ED704864-E610-4018-8461-253A760D1D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED704864-E610-4018-8461-253A760D1D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED704864-E610-4018-8461-253A760D1D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F2E9B85-2110-47F0-85DE-0DB863B9B8C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
